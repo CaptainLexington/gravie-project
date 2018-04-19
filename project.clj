@@ -3,6 +3,7 @@
                  [org.clojure/clojurescript "1.9.908"]
                  [reagent "0.7.0"]
                  [re-frame "0.10.5"]
+                 [cljs-http "0.1.45"]
                  [com.andrewmcveigh/cljs-time "0.5.0"]
                  [org.clojure/core.async "0.2.391"]
                  [re-com "2.1.0"]
@@ -53,7 +54,8 @@
   {:builds
    [{:id           "dev"
      :source-paths ["src/cljs"]
-     :figwheel     {:on-jsload "gravie-project.core/mount-root"}
+     :figwheel     {:on-jsload "gravie-project.core/mount-root"
+                    :websocket-host :js-client-host }
      :compiler     {:main                 gravie-project.core
                     :output-to            "resources/public/js/compiled/app.js"
                     :output-dir           "resources/public/js/compiled/out"

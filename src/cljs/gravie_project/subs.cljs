@@ -15,3 +15,18 @@
  ::search-results
  (fn [db _]
    (:search-results db)))
+
+(re-frame/reg-sub 
+  ::cart
+  (fn [db _]
+    (:cart db)))
+
+(re-frame/reg-sub 
+  ::library
+  (fn [db _]
+    (:library db)))
+
+(re-frame/reg-sub 
+  ::query
+  (fn [db _]
+    (:query db)))

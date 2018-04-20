@@ -1,4 +1,7 @@
 (ns gravie-project.db)
 
 (def default-db
-  {:name "re-frame"})
+  {:name "re-frame"
+   :query ""
+   :cart #{}
+   :library #{}})
